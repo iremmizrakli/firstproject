@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=montserrat:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+font-size: 10px;
+font-family: 'montserrat', sans-serif;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Hero Section*/
+.hero{
+    min-height: 80vh;
+    width: 100%;
+    padding-top: 50px;
+    background-color: rgb(29, 83, 29);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.hero .hero-info{
+    width: 100%;
+    text-align: center;
+}
+.hero .hero-info .hero-info-heading{
+font-size: 5rem;
+font-weight: 500;
+color: whitesmoke;
+}
+.hero .hero-info .hero-info-subheading{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: whitesmoke;
+}
+.hero .hero-info .hero-info-button{
+    margin-top: 30px;
+    padding: 2rem 5rem;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    letter-spacing: .6rem;
+    background-color: rgba(85, 85, 85, 0.534);
+}
+.hero .hero-img{
+    height: auto;
+    width: 80%;
+    margin-bottom: 3rem;
+}
+.hero .hero-img img{
+    height: 100%;
+    width: 100%;
+}
+/*End Hero Section*/
+/*Hakkında Section*/
+.hakkında{
+    width: 100%;
+    min-width: 50vh;
+    padding: 10rem 5 rem;
+    flex-direction: column;
+}
+.hakkında .hakkında-info{
+    text-align: center;
+}
+.hakkında .hakkında-info .hakkında-info-heading{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: rgb(18, 17, 17);
+}
+.hakkında .hakkında-info .hakkında-info-desc{
+font-size: 1.3rem;
+line-height: 2rem;
+margin-top: 10px;
+}
+.hakkında .hakkında-info .hakkında-info-button{
+    padding: 1.6rem 2.6rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.525);
+    color: rgb(61, 3, 3);
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 20px;
+}
+.hakkında .hakkında-img .hakkında-img-wrapper{
+    margin-top: 50px;
+    height: auto;
+    max-width: 400px;
+    position: relative;
+    display: inline-block;
+
+}
+.hakkında .hakkında-img .hakkında-img-wrapper img{
+    height: 100%;
+    width: 100%;
+}
+.hakkında .hakkında-img .hakkında-img-wrapper::after{
+    position: absolute;
+    content: '';
+    right: -5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+    height: 120%;
+    background-color: rgba(69, 172, 69, 0.726);
+    z-index: -1;
+}
+/*End Hakkında Section*/
+/*Hizmetler Section*/
+.hizmetler{
+    flex-direction: column;
+    min-height: 60vh;
+    padding: 10rem 5 rem;
+}
+.hizmetler .hizmetler-header{
+    width: 100%;
+    text-align: center;
+}
+.hizmetler .hizmetler-header .hizmetler-header-heading{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+}
+.hizmetler .hizmetler-header .hizmetler-header-desc{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-top: 20px;
+}
+.hizmetler .hizmetler-info{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+.hizmetler .hizmetler-info .hizmet {
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    transition: .3s ease transform;
+    margin: 5px;
+}
+.hizmetler .hizmetler-info .hizmet .hizmet-card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: .3s ease transform;
+    display: block;
+}
+.hizmetler .hizmetler-info .hizmet .hizmet-card .hizmet-font,
+.hizmetler .hizmetler-info .hizmet .hizmet-card .hizmet-back{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.014);
+    padding: 10px;
+}
+.hizmetler .hizmetler-info .hizmet .hizmet-card .hizmet-back{
+    transform: rotateY(180deg);
+}
+.hizmetler .hizmetler-info .hizmet .hizmet-card . i{
+    font-size: 4rem;
+    color: black;
+    margin-bottom: 10px;
+}
+.hizmetler .hizmetler-info .hizmet .hizmet-card .hizmet-front-heading{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+.hizmetler .hizmetler-info .hizmet:hover .hizmet-card{
+    transform: rotateY(180deg);
+}
+.hzmetler .hizmetler-info .hizmet .hizmet-card .hizmet-back .hizmet-back-desc{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    text-align: center;
+}
+.hizmetler .hizmetler-info .hizmet:nth-child(2) .hizmet-card .hizmet-front {
+    background-image: url(./download.jpg);
+    background-size: cover;
+    position: relative;
+    color: rgb(66, 3, 3);
+}
+.hizmetler .hizmetler-info .hizmet:nth-child(2) .hizmet-card .hizmet-front::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(42, 143, 42, 0.452);
+    z-index: -1;
+}
+.hizmetler .hizmetler-info .hizmet:nth-child(2) .hizmet-card .hizmet-front i{
+color: rgb(1, 11, 8);
+}
+/*End Hizmetler Section*/
+/*Sec Section*/
+.sec{
+    min-height: 10vh;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.219);
+    padding: 3rem 2rem;
+}
+.sec .sec-heading{
+    color: black;
+    font-size: 2.2rem;
+    text-align: center;
+}
+.sec .sec-button{
+    padding: 2rem 3rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.251);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .2rem;
+    margin-top: 10px;
+    color: rgb(71, 5, 5);
+    transition: .3s ease background-color;
+}
+/*End Sec Section*/
